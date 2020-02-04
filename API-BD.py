@@ -12,7 +12,7 @@ conexao = mysql.connector.connect(
 )
 cursor = conexao.cursor(buffered=True)
 
-#fazendo consulta na tabela veiculos e selecionado os ids, Ao todo são 739 ids, mas colocquei os 5 primeiros.
+#fazendo consulta na tabela veiculos e selecionado os ids, Ao todo são 739 ids, mas coloquei os 5 primeiros.
 cursor.execute("select id_veiculo from veiculos limit 5")
 
 data_inicio = input( 'Digite a data de inicio que deseja consultar (ex: AAAA-MM-DD):' )
@@ -23,7 +23,7 @@ veiculos = []
 for x in cursor:
     veiculos.append(x)
     
-    #Aqui pego os 5 ids e jogo na url da api para pega os ddos de json de cada id.
+    #Aqui pego os 5 ids e jogo na url da api para pega os dados de json de cada id.
     for y in veiculos:
         req = requests.get(
             f'http://backend.rassystem.com.br/app/v1/api/veiculos/{y[0]}/rastreio?dataInicio={data_inicio}T12:00:00-03:00&dataFim={data_fim}T12:00:00-03:00',
@@ -53,4 +53,4 @@ for x in cursor:
             
             #OBS: Quando coloco para imprimir o insert_query, todos os 5 ids são impressos na tela.
             #Mas se colocar o cursor.execute(insert_qery) com ta ai, so imprimi o 1º id e so salva esse 1º no banco.
-            #Como fazer para imprimir todos os ids que eu coocar la na consulta?
+            #Como fazer para imprimir e salvar no banco de dados todos os ids que eu colocar la na consulta?
