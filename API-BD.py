@@ -13,7 +13,7 @@ conexao = mysql.connector.connect(
 cursor = conexao.cursor(buffered=True)
 
 #fazendo consulta na tabela veiculos e selecionado os ids, Ao todo são 739 ids, mas coloquei os 5 primeiros.
-cursor.execute("select id_veiculo from veiculos limit 5")
+cursor.execute("select id_veiculo from veiculos limit 5") 
 
 data_inicio = input( 'Digite a data de inicio que deseja consultar (ex: AAAA-MM-DD):' )
 data_fim = input( 'Digite a data de fim que deseja consultar (ex: AAAA-MM-DD): ' )
