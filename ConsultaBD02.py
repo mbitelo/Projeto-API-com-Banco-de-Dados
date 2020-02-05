@@ -29,7 +29,3 @@ for i in dados['features']:
 
     print( '\n')
 
-    cursor.executemany("INSERT INTO log2 (idveiculo, datas, latitude, longitude) VALUES (%s, %s, %s, %s)", idveiculo, data, longitude, latitude)
-    #var = (idveiculo, data, latitude, longitude))
-
-conexao.commit()
