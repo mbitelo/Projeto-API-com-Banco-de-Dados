@@ -30,7 +30,7 @@ for x in cursor:
             auth=('aboliveira', 'alison00'))
         dados = json.loads(req.text)
         
-        #Aqui intero os resultados do json, so preciso desses 4 dados da api (idveiculo, data, latitude e longitude)
+        #Aqui faço a iteração dos resultados do json, so preciso desses 4 dados da api (idveiculo, data, latitude e longitude)
         for i in dados['features']:
             idveiculo = i['properties']['idVeiculo']
             #print('IdVeiculo...:', idveiculo)
