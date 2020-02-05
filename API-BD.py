@@ -48,7 +48,7 @@ for x in cursor:
             cursor.execute(insert_query)
             
             conexao.commit()
-            
+             
             
             #OBS: Quando coloco para imprimir o insert_query, todos os 5 ids são impressos na tela.
             #Mas se colocar o cursor.execute(insert_qery) com ta ai, so imprimi o 1º id e so salva esse 1º no banco.
