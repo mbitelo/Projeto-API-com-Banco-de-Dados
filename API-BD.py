@@ -43,7 +43,7 @@ for x in cursor:
             #print('\n')
             
             #Faço a inserção dos dados em outra tabela (log2)
-            insert_query = "INSERT INTO log2(idveiculo, datas, latitude, longitude) VALUES ('" + str(idveiculo ) + "','" + data + "','" + str( latitude ) + "','" + str( longitude ) + "')"
+            insert_query = "INSERT INTO log2(idveiculo, datas, latitude, longitude) VALUES ('" + str(idveiculo ) + "','" + data + "','" + str( latitude ) + "','" + str( longitude ) + "');"
             print( insert_query )
             cursor.execute(insert_query)
             
